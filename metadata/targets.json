@@ -1,0 +1,84 @@
+{
+ "signatures": [
+  {
+   "keyid": "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b",
+   "sig": "88d3364db2e4508ed5ab740a985dd534c5315037a1f2c86f1e687955d952d3d16a8f35b3538e8adc27b18381bb43fe253c92a87b0c02024105ca248ea5d4390964bba4111182b9635818ea72830628d550aac16a3170c53328d06bcd15729a57ee0330efd5623af3c26117a868f4d31f2212d49e8d402349a0247d22c80db5596d570acc5c651d30b218368501f7866f62c23072c4a5dda844885d52c8bb29e7f92fa3149abae3ca00753b88c9aea09c5fe75825fa3648f47fed18b936a89bc2b0c5e73fccb5a09b2d751475c3756faa80b064664866f25d050ecf6e53cea302c145836d019765890fdab8bc043deac52a50010cf9d25d048f0c3eac2129773b"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "delegations": {
+   "keys": {
+    "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b": {
+     "keyid_hash_algorithms": [
+      "sha256",
+      "sha512"
+     ],
+     "keytype": "rsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtdvJF1Q7fRNTQfgGMH/W\n2Sb4O/PemLHKcBj6Q1Nadvii+lF+lfsD/VqzEuNaM2fpJpostWzJR1jdeyjRZS9G\ndToEA9iSD0MczHRLWa9a1NMcPBC/Edts1oXogk23+NSL/Ugc5H+WikDuwMMYhA3o\nNgVgAtfDfJQJFkbI033DwcYjbBmlt/gnTVNUSHuoG8M2EurchMnZZIqSawEaL82Q\nIFUhEuGSljcb/WRj6XHY7upCvjJOMN2kH/zz4kGR8j5t61TKiLiepjunuQMGg+fl\njEm4v0fandpwWLdx7kYSbftmbQjnuPhBd3g3BQ721O4dYkLA/ncca9XryLqN8Cac\ngQIDAQAB\n-----END PUBLIC KEY-----"
+     },
+     "scheme": "rsa-pkcs1v15-sha256"
+    }
+   },
+   "roles": [
+    {
+     "keyids": [
+      "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b"
+     ],
+     "name": "law",
+     "paths": [
+      "DCCouncil/law-xml",
+      "DCCouncil/law-html",
+      "DCCouncil/law-xml-codified",
+      "capstone",
+      "branch"
+     ],
+     "terminating": true,
+     "threshold": 1
+    },
+    {
+     "keyids": [
+      "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b"
+     ],
+     "name": "docs",
+     "paths": [
+      "DCCouncil/law-docs"
+     ],
+     "terminating": true,
+     "threshold": 1
+    },
+    {
+     "keyids": [
+      "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b"
+     ],
+     "name": "assets",
+     "paths": [
+      "DCCouncil/law-static-assets"
+     ],
+     "terminating": true,
+     "threshold": 1
+    }
+   ]
+  },
+  "expires": "2020-06-29T20:23:55Z",
+  "spec_version": "1.0",
+  "targets": {
+   "repositories.json": {
+    "hashes": {
+     "sha256": "b6797e48b512558f83cc73b49c707e0b35561f4a7f9f3cb361e105bc5cb6a09b",
+     "sha512": "11edb3fd8a73eafa45064a80e5936e629c21d9e6f1ef0bf9cb878b49099cd0ab2a8bcfad4d227e9d67ecda8f5bf6a3dedd2ae4ad8c093fc5be97475edc800094"
+    },
+    "length": 1935
+   },
+   "test-auth-repo": {
+    "hashes": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+    },
+    "length": 0
+   }
+  },
+  "version": 1
+ }
+}
