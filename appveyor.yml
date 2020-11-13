@@ -62,7 +62,7 @@ before_build:
   - git clone git@github.com:oll-test-repos/DCCouncil-law-html.git ..\DCCouncil\law-html
   - git clone  git@github.com:oll-test-repos/DCCouncil-law-xml-codified.git ..\DCCouncil\law-xml-codified
 
-  - git -C ..\DCCouncil-law remote set-url origin git@github.com:oll-test-repos/DCCouncil-law.git
+  - git -C ..\%APPVEYOR_PROJECT_SLUG% remote set-url origin git@github.com:oll-test-repos/DCCouncil-law.git
 
   - "%PYTHON%\\python.exe -m pip -q install wheel"
   - "%PYTHON%\\python.exe -m pip -q install -r requirements.txt"
@@ -76,11 +76,18 @@ build_script:
   - ps: $env:FLAG = if ($env:APPVEYOR_PULL_REQUEST_NUMBER -eq $null) { "--deploy" }
 
   # merge commits of update or speculative branches
-  - "%PYTHON%\\python.exe  -m oll.tools.cli ci merge_commits --library-root .. --auth ../DCCouncil-law %FLAG%"
+  - "%PYTHON%\\python.exe  -m oll.tools.cli ci merge_commits --library-root .. --auth ../%APPVEYOR_PROJECT_SLUG% %FLAG%"
 
   # update timestamp and/or snapshot metadata files if about to expire
   # if previous command merges something to master, this command won't update anything
-  - "%PYTHON%\\python.exe -m oll.tools.cli ci update_timestamp_and_snapshot --auth ../DCCouncil-law --expires-in-next-hours %SCHEDULED_BUILD_INTERVAL% %FLAG%"
+  - "%PYTHON%\\python.exe -m oll.tools.cli ci update_timestamp_and_snapshot --auth ../%APPVEYOR_PROJECT_SLUG% --expires-in-next-hours %SCHEDULED_BUILD_INTERVAL% %FLAG%"
+
+notifications:
+  - provider: Slack
+    incoming_webhook:
+      # post to the fire channel
+      secure: KUaR+KAqX1jU0LF7kRDKHHGEAoItFzIHSjcreyRvnrT1vcX5+4iV77Ivysxl8jhh8ocUE0JCcmcKI0xPTb+M+EMfb8xk9L7+XCTdNubjU5w=
+    on_build_success: false
 
 test_script:
 - echo Skipping doomed test discovery to save time
