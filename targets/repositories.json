@@ -1,12 +1,5 @@
 {
     "repositories": {
-        "DCCouncil/law-docs": {
-            "custom": {
-                "allow-unauthenticated-commits":true,
-                "serve":"latest",
-                "location_regex":"~/.*\\.pdf$"
-            }
-        },
         "DCCouncil/law-xml": {
             "custom": {
                 "type":"xml",
