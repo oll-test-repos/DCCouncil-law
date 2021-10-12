@@ -15,6 +15,9 @@ init:
   - git config --global user.email developers@openlawlib.org
 
 install:
+  # upgrade pip
+  - "%PYTHON%\\python.exe -m pip install --upgrade pip"
+
   # the only way we can use the deploy key is by putting it in an environment variable (see above)
   # and then using PowerShell (ps) to copy the environment variable into a file (see below)
   # begin/end key lines should be in the environment variable
@@ -46,17 +49,23 @@ before_build:
         git clone -q git@github.com:openlawlibrary/platform.git ..\wheels\platform
         git -C ..\wheels\platform checkout -q $env:PLATFORM_BRANCH
         $env:CORE_WHEEL = "-e ..\wheels\platform\core"
-        $env:PARTNERS_WHEEL = "-e ..\wheels\platform\partners"
+        $env:PARTNERS_WHEEL = "-e ..\wheels\platform\partners-us-dc"
       } else {
         $env:CORE_WHEEL = "--pre oll-core"
-        $env:PARTNERS_WHEEL = "--pre oll-partners"
+        $env:PARTNERS_WHEEL = "--pre oll-partners-us-dc"
       };
+
+  - "%PYTHON%\\python.exe -m pip -q install wheel"
+  - "%PYTHON%\\python.exe -m pip -q install %TAF_WHEEL%"
+  - "%PYTHON%\\python.exe -m pip -q install %CORE_WHEEL%"
+  - "%PYTHON%\\python.exe -m pip -q install %PARTNERS_WHEEL%"
+  - "%PYTHON%\\python.exe -m pip list"
 
   - git clone git@github.com:oll-test-repos/DCCouncil-law-xml.git ..\DCCouncil\law-xml
   - git clone git@github.com:oll-test-repos/DCCouncil-law-html.git ..\DCCouncil\law-html
   - git clone  git@github.com:oll-test-repos/DCCouncil-law-xml-codified.git ..\DCCouncil\law-xml-codified
 
-  - git -C ..\DCCouncil-law remote set-url origin git@github.com:oll-test-repos/DCCouncil-law.git
+  - git -C ..\%APPVEYOR_PROJECT_SLUG% remote set-url origin git@github.com:oll-test-repos/DCCouncil-law.git
 
   - "%PYTHON%\\python.exe -m pip -q install wheel"
   - "%PYTHON%\\python.exe -m pip -q install -r requirements.txt"
@@ -70,11 +79,18 @@ build_script:
   - ps: $env:FLAG = if ($env:APPVEYOR_PULL_REQUEST_NUMBER -eq $null) { "--deploy" }
 
   # merge commits of update or speculative branches
-  - "%PYTHON%\\python.exe  -m oll.tools.cli ci merge_commits --library-root .. --auth ../DCCouncil-law %FLAG%"
+  - "%PYTHON%\\python.exe  -m oll.tools.cli ci merge-commits --library-root .. --auth ../%APPVEYOR_PROJECT_SLUG% %FLAG%"
 
   # update timestamp and/or snapshot metadata files if about to expire
   # if previous command merges something to master, this command won't update anything
-  - "%PYTHON%\\python.exe -m oll.tools.cli ci update_timestamp_and_snapshot --auth ../DCCouncil-law --expires-in-next-hours %SCHEDULED_BUILD_INTERVAL% %FLAG%"
+  - "%PYTHON%\\python.exe -m oll.tools.cli ci update-timestamp-and-snapshot --auth ../%APPVEYOR_PROJECT_SLUG% %FLAG%"
+
+notifications:
+  - provider: Slack
+    incoming_webhook:
+      # post to the fire channel
+      secure: KUaR+KAqX1jU0LF7kRDKHHGEAoItFzIHSjcreyRvnrT1vcX5+4iV77Ivysxl8jhh8ocUE0JCcmcKI0xPTb+M+EMfb8xk9L7+XCTdNubjU5w=
+    on_build_success: false
 
 test_script:
 - echo Skipping doomed test discovery to save time
