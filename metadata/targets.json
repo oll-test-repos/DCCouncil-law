@@ -2,7 +2,7 @@
  "signatures": [
   {
    "keyid": "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b",
-   "sig": "22edfebd2d9b466df6e11ac2c1a4b48cb3b811ea6b262bdee8e3264b876741f2ac35f4536e532f8b33d271601f766818f00c45e5be618f169c1bcfc1e7930c28dc0935dc4206623989ea575174b202daed061029277763b3b6f88ae6ae6864cfceacca1627353ccff62baa55c6ae429c60b6472d1e92411c959a2399fd3815e42041a69379067377c90882edef0afd04af7a0b6d48ea60add26037d202eea673c9fea50edac8a4b62c11885b3b62e5eab7ccb40f294f4324c8c9faf6eff69dd5f71b0408cb8ea4b93cdd654c40ad208748944a752ac63d87028dd936231686fec8c88bb53985fbd566e2b3d8f45bd6553e6ab484e4f1c748c413234a8024d055"
+   "sig": "4d3cb417bc83e5a7566712c710fdd06c1a61c7018988f0531cf25b8a78a0f23eb1654953adf5600e89a169a72c08a8877f0eb03de39d04a2490513059a9614639a807e3b18c97519f6f6534ceacd34b9416d6dacef818f9b7a4a6180442b7a58afdaa346719e5f8e1a49090ff476e65faddbeedadd7b3fc83ce80beb58376e334941368e5c785fc6b3c2ac7b04310242a8785bce946af4fef08656034b859a90f69f56e84a532c51e9fcd2e0fa3853e6d62d32294ce7c1fd764b7676d6330e149430b0af8cc9f8da4c1308cc548fae1e2a87d99d0724780ff68708c19f7ea01c1e1abcdf67f8d30eb8f258df7d5d7fce514ebdb6a4502ad0d9feefe9a69699e7"
   }
  ],
  "signed": {
@@ -84,10 +84,23 @@
      ],
      "terminating": true,
      "threshold": 1
+    },
+    {
+     "keyids": [
+      "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b"
+     ],
+     "name": "rdf",
+     "paths": [
+      "DCCouncil/law-rdf",
+      "rdf/branch",
+      "rdf/capstone"
+     ],
+     "terminating": true,
+     "threshold": 1
     }
    ]
   },
-  "expires": "2024-10-09T18:27:57Z",
+  "expires": "2024-10-09T18:31:11Z",
   "spec_version": "1.0.0",
   "targets": {
    "mirrors.json": {
@@ -112,6 +125,6 @@
     "length": 0
    }
   },
-  "version": 9
+  "version": 10
  }
 }
