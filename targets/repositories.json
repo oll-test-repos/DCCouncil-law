@@ -43,6 +43,13 @@
                 "is_fallback": true,
                 "routes": [".*/_document/.*", "_reader/.*"]
             }
+        },
+        "DCCouncil/law-rdf": {
+            "custom": {
+                "type":"rdf",
+                "serve":"latest",
+                "serve-prefix":"_rdf"
+            }
         }
     }
 }
