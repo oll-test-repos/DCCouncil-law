@@ -2,13 +2,24 @@
  "signatures": [
   {
    "keyid": "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b",
-   "sig": "7a6ca6a527ec043afa3e858c699d400f3feb93e5f90bdb224d72b4486c0c63f072d269f3e54bc6d32463692324142cabee7f2591d680950ded32222a6e39554582954734da89130e722d24f9914a9d8219cd909b3410c28c16212ce9065eb1ce4fbb2422f6fb646df7ca6d705a187c417263b02c2979cfe0cc552da743fe0e433880805bd7a9fb6665eb685f19076b13b997af614131e968ffcd26ce059717f6fd62b1b5dcd521ce54f96672433555f47e1aa1a751dd921208f269b1fa84344aff9ecec15b8e65b392b70a43b9c60648800c94663d755f231be3219f0f6de81440a0b9e9df5bfa3c39ca1b7da0f4953e3d5e9e6a439e21ba39749e3f845ad923"
+   "sig": "b2c7ae20d3b1a0547f3b8820313b6b33d699e786da08be695a64477cc718cc2d1e37e94d815c4ad44e77c847eb8a0e163d525549c3b0098c71ae2d136d2142ae3344b62bf33b182e6842bafad04d7ad089c08ed86f7fddc1afbb8a04eb54197c542277b7c75d99a6447e13d8aee59d2f30b2c07fcf083fbb45507334cac3d63722a3bbe5963ce67af4edc1ee585647f208c21e9e26b55773f6c1707415cada07b54c3dd5d5dc148acd23cb31109bb50bd2aed5380271032aad17bb06e13e73ffafca5fdc83e637abb2c41b11a3528b3725c0c203189d8cf87b33707863bd7c94a943bb8acddaf2deaa1c6155b984cd9ae4425bb276dfd075d400b63dc995d1cb"
   }
  ],
  "signed": {
   "_type": "targets",
   "delegations": {
    "keys": {
+    "3ee0cbbdea49d1698ee17d6eb1f6c160315800026dfc29f810e0a216fa1b7e68": {
+     "keyid_hash_algorithms": [
+      "sha256",
+      "sha512"
+     ],
+     "keytype": "rsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6OyuwnpYgc3asb9sp8rR\nI+8IBFubCsnVoNooFwK0I/mHVM37PA6GOgsfvDcwYVO5hxTSzkiiPXVkXcQvQIqj\nxYM+mIvRMoMMZYGe7FG5lyKCsOkAyRVouc65aemcpL3YvfJfk6d0emv178x5Npge\nV+mHu5FTSPmxvHH2yMQms9o8TWlrDQUBn6s24s/FFTu4Z2SQbJHhJTgFpHIl50Bq\nE28NJLSG5KI5waEaA/oQTATTLGVF/nsVouZQop34CzObpPzD+r7XqrTT7IquEfDj\nwKeCE6UWrypkCo6k7hdv9ZV/oihqeSNMzsyppvfiH9tfMS+sjte43yn5YjME9ZPd\nYwIDAQAB\n-----END PUBLIC KEY-----"
+     },
+     "scheme": "rsa-pkcs1v15-sha256"
+    },
     "7523b7f2167d759ca8da32487d7260dcbab3cb2bf4b05e36ef6d2f9204af24d2": {
      "keyid_hash_algorithms": [
       "sha256",
@@ -100,7 +111,8 @@
     {
      "keyids": [
       "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b",
-      "7523b7f2167d759ca8da32487d7260dcbab3cb2bf4b05e36ef6d2f9204af24d2"
+      "7523b7f2167d759ca8da32487d7260dcbab3cb2bf4b05e36ef6d2f9204af24d2",
+      "3ee0cbbdea49d1698ee17d6eb1f6c160315800026dfc29f810e0a216fa1b7e68"
      ],
      "name": "rdf",
      "paths": [
@@ -113,7 +125,7 @@
     }
    ]
   },
-  "expires": "2024-11-05T13:54:48Z",
+  "expires": "2024-11-07T15:35:36Z",
   "spec_version": "1.0.0",
   "targets": {
    "mirrors.json": {
@@ -145,6 +157,6 @@
     "length": 0
    }
   },
-  "version": 12
+  "version": 13
  }
 }
