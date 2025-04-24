@@ -1,0 +1,103 @@
+{
+ "signatures": [
+  {
+   "keyid": "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b",
+   "sig": "4db6e707e1d9b70cced7292353a0ce364cd25e48a688fe6635d2f75c61dede65d4c97a7480c4a93f3c89356f038ab879af979356bd9aa78e2cabdc2bc06a4f6fcd7b3a74bf17c79c19f596cace82cc50e21675c2d6e8f05e3ef8ee4b703f18f00b0262e80666bd6dfe04a618e925a920e3f92e44b616b6823399fe7a1fc9dccd648021406c604b286e1b67e3cde4f1a39092dfb09047a492dab5c9729b01dacdc8606c8691bcf48fbbfca511dfed54b8728c3f4d17202d04e61f5eb874e090fd4f79ca4b6f62dcf5c30f8852792360a3a92f791d17a4db5bf79c87447a17b74ac7c53ae65bbcefd3bf71ea1512556658e1ce0587c037b7950f59d2515a5cb637"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "delegations": {
+   "keys": {
+    "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b": {
+     "keyid_hash_algorithms": [
+      "sha256",
+      "sha512"
+     ],
+     "keytype": "rsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtdvJF1Q7fRNTQfgGMH/W\n2Sb4O/PemLHKcBj6Q1Nadvii+lF+lfsD/VqzEuNaM2fpJpostWzJR1jdeyjRZS9G\ndToEA9iSD0MczHRLWa9a1NMcPBC/Edts1oXogk23+NSL/Ugc5H+WikDuwMMYhA3o\nNgVgAtfDfJQJFkbI033DwcYjbBmlt/gnTVNUSHuoG8M2EurchMnZZIqSawEaL82Q\nIFUhEuGSljcb/WRj6XHY7upCvjJOMN2kH/zz4kGR8j5t61TKiLiepjunuQMGg+fl\njEm4v0fandpwWLdx7kYSbftmbQjnuPhBd3g3BQ721O4dYkLA/ncca9XryLqN8Cac\ngQIDAQAB\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "rsa-pkcs1v15-sha256"
+    },
+    "d4d3bb6342cec2874975654b613474482c8a181d021eb79ed7aecbbb6f6fe542": {
+     "keyid_hash_algorithms": [
+      "sha256",
+      "sha512"
+     ],
+     "keytype": "rsa",
+     "keyval": {
+      "public": "-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAnx6lib/YLZ0PLWoXZ0yS\n4ZVAeShi0l3JL8rBhX5rvA8sECyv572rgiLRjMv2m+cHChcdkVwlVhEYdTwNwQCs\nIDqky5VU76o6jcPoKas1k0AvDjgP4fTnFVJbAxhAw2M6Ybt4/7lQ8yEcqWBM8G3U\nEX/Djep8KYFobUr2nJhQtGQNWZLS7c4JOQE8H4qKVRtoQx3NkQovRE53BBa/Qj++\nbvqeGSWpw7BIgq4ntD80HZnekatAOXbiM6rmxbK82OGqKZsqaBv8j31AEGRVAbei\nR8Sa1XvYminDRqyDvmWOlCdAkqVsyzgPWTMIlw1sydlofip01LkCegXAFx636Cvs\n+bpvOUCnOwSP+kw33eqSZSKUZ/IpSJrq+/lhstJNSxLko+wc3mKXztqClG+CCYbC\n+z7bulTpdRHFvnhWQBQbi7GrZ0QMo7PSjtpBYIAQ5LYKqyryZvzO21WOwp7l2Ap1\nDgUyUi3vITva3fQNr1Zpg9/8x782UUbX4HU0T2dw/r9vAgMBAAE=\n-----END PUBLIC KEY-----\n"
+     },
+     "scheme": "rsa-pkcs1v15-sha256"
+    }
+   },
+   "roles": [
+    {
+     "keyids": [
+      "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b"
+     ],
+     "name": "law",
+     "paths": [
+      "DCCouncil/law-xml",
+      "DCCouncil/law-html",
+      "DCCouncil/law-xml-codified",
+      "law/capstone",
+      "law/branch",
+      "capstone",
+      "branch"
+     ],
+     "terminating": true,
+     "threshold": 1
+    },
+    {
+     "keyids": [
+      "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b"
+     ],
+     "name": "rdf",
+     "paths": [
+      "DCCouncil/law-rdf",
+      "rdf/branch",
+      "rdf/capstone"
+     ],
+     "terminating": true,
+     "threshold": 1
+    },
+    {
+     "keyids": [
+      "ba65808977548012b65ab8229f7b939e2339703cec3686ef816f2480274e7f9b"
+     ],
+     "name": "docs",
+     "paths": [
+      "DCCouncil/law-docs"
+     ],
+     "terminating": true,
+     "threshold": 1
+    },
+    {
+     "keyids": [
+      "d4d3bb6342cec2874975654b613474482c8a181d021eb79ed7aecbbb6f6fe542"
+     ],
+     "name": "assets",
+     "paths": [
+      "DCCouncil/law-static-assets"
+     ],
+     "terminating": true,
+     "threshold": 1
+    }
+   ]
+  },
+  "expires": "2025-07-23T10:31:01Z",
+  "spec_version": "1.0.31",
+  "targets": {
+   "test-auth-repo": {
+    "hashes": {
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+    },
+    "length": 0
+   }
+  },
+  "version": 2
+ }
+}
